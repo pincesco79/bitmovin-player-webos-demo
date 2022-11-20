@@ -6,17 +6,56 @@ var player;
 var source = {
   // AVC Stream
   // dash : "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd",
+  // RAI 4K
+  //dash : "https://raievent10-dash-live.akamaized.net/dash/live/664000/raievent10/manifest.mpd?hdnea=st=1668965114~exp=1668965264~acl=/*~hmac=21026a599c125edde0cb106f8a64bed3f4a94b85104b2da5642d6ee357ccb034",
+  // RAI 1
+  //dash: 'https://streamcdng3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raiuno1/hls/rai1_2400/chunklist.m3u8?baseuri=%2Fraiuno1%2Fhls%2F&tstart=0&tend=1669054147&tk2=fb5d047067eb3540cc20f3f653a36b2478cf183a91c1a21cebd3a59f7bb9dd19',
+  // BARRE
+  //dash: "https://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd",
+  // BUNNY 4K
+  //dash: "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd",
   // HEVC Stream
-  // dash : "https://bitmovin-a.akamaihd.net/content/multi-codec/hevc/stream.mpd"
+  // dash : "https://bitmovin-a.akamaihd.net/content/multi-codec/hevc/stream.mpd",
   // Widevine Stream
-  dash: 'https://bitmovin-a.akamaihd.net/content/art-of-motion_drm/mpds/11331.mpd',
+  //dash: 'https://bitmovin-a.akamaihd.net/content/art-of-motion_drm/mpds/11331.mpd',
+  // dashif example http://reference.dashif.org/dash.js/latest/samples/drm/widevine.html
+  dash: "https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd",
+  //"httpRequestHeaders": {
+      //  "X-AxDRM-Message": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImZpcnN0X3BsYXlfZXhwaXJhdGlvbiI6NjAsInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sImtleXMiOlt7ImlkIjoiOWViNDA1MGQtZTQ0Yi00ODAyLTkzMmUtMjdkNzUwODNlMjY2IiwiZW5jcnlwdGVkX2tleSI6ImxLM09qSExZVzI0Y3Iya3RSNzRmbnc9PSJ9XX19.FAbIiPxX8BHi9RwfzD7Yn-wugU19ghrkBFKsaCPrZmU"
+  //}
   drm: {
-    widevine: {
-      LA_URL: 'https://widevine-proxy.appspot.com/proxy'
-    }
-  }
-};
 
+    widevine: {
+
+      LA_URL: 'https://drm-widevine-licensing.axtest.net/AcquireLicense',
+
+      headers: {
+
+        'X-AxDRM-Message': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImZpcnN0X3BsYXlfZXhwaXJhdGlvbiI6NjAsInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sImtleXMiOlt7ImlkIjoiOWViNDA1MGQtZTQ0Yi00ODAyLTkzMmUtMjdkNzUwODNlMjY2IiwiZW5jcnlwdGVkX2tleSI6ImxLM09qSExZVzI0Y3Iya3RSNzRmbnc9PSJ9XX19.FAbIiPxX8BHi9RwfzD7Yn-wugU19ghrkBFKsaCPrZmU'
+
+      },
+
+      withCredentials: false,
+
+    },
+
+    playready: {
+
+      LA_URL: 'https://playready.directtaps.net/pr/svc/rightsmanager.asmx?PlayRight=1&ContentKey=EAtsIJQPd5pFiRUrV9Layw==',
+
+      headers: {
+
+        'X-AxDRM-Message': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiYjMzNjRlYjUtNTFmNi00YWUzLThjOTgtMzNjZWQ1ZTMxYzc4IiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImZpcnN0X3BsYXlfZXhwaXJhdGlvbiI6NjAsInBsYXlyZWFkeSI6eyJyZWFsX3RpbWVfZXhwaXJhdGlvbiI6dHJ1ZX0sImtleXMiOlt7ImlkIjoiOWViNDA1MGQtZTQ0Yi00ODAyLTkzMmUtMjdkNzUwODNlMjY2IiwiZW5jcnlwdGVkX2tleSI6ImxLM09qSExZVzI0Y3Iya3RSNzRmbnc9PSJ9XX19.FAbIiPxX8BHi9RwfzD7Yn-wugU19ghrkBFKsaCPrZmU'
+
+      },
+
+      withCredentials: false,
+
+    }
+
+  }
+
+};
 window.onload = function () {
   setupControllerEvents();
   setupPlayer();
@@ -58,7 +97,7 @@ function setupPlayer () {
   bitmovin.player.core.Player.addModule(window.bitmovin.player.webos.default);
 
   var conf = {
-    key: PLAYER_KEY,
+    key: '3bcadad0-20a2-49f1-907c-12923e2a176b',
     playback: {
       autoplay: true,
       preferredTech: [{

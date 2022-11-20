@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:mpeg:dash:schema:mpd:2011"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:cenc="urn:mpeg:cenc:2013"
+     xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+     profiles="urn:mpeg:dash:profile:isoff-live:2011"
+     type="dynamic"
+     minimumUpdatePeriod="PT6.0S" 
+     publishTime="2022-11-20T17:38:36.914Z" 
+     availabilityStartTime="2022-11-19T11:41:17.781Z" 
+     timeShiftBufferDepth="PT30.0S"
+     suggestedPresentationDelay="PT6.0S" 
+     minBufferTime="PT6.0S">
+<ProgramInformation>
+    <Title>raievent10</Title>
+</ProgramInformation>
+<BaseURL>https://raievent10-dash-live.akamaized.net/dash/live/664000/raievent10/</BaseURL>
+<Period id="0" start="PT0.0S">
+    <AdaptationSet id="0" mimeType="video/mp4" width="3840" height="2160" par="16:9" frameRate="50" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+        <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="712d8e2f-3da5-33ec-84cb-99d25d617190"/>
+        <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" value="Widevine">
+            <cenc:pssh>AAAAQnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAACIIARIQcS2OLz2lM+yEy5nSXWFxkBoFTmFncmEiBXJhaTRr</cenc:pssh>
+        </ContentProtection>
+        <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="Playready">
+            <cenc:pssh>AAAETnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAABC4uBAAAAQABACQEPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwATABBAF8AVQBSAEwAPgBoAHQAdABwAHMAOgAvAC8AUgBBAEkANgBOAEIANQBGAC4AYQBuAHkAYwBhAHMAdAAuAG4AYQBnAHIAYQAuAGMAbwBtAC8AUgBBAEkANgBOAEIANQBGAC8AcAByAGwAcwAvAGMAbwBuAHQAZQBuAHQAbABpAGMAZQBuAHMAZQBzAGUAcgB2AGkAYwBlAC8AdgAxAC8AbABpAGMAZQBuAHMAZQBzADwALwBMAEEAXwBVAFIATAA+ADwATABVAEkAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBSAEEASQA2AE4AQgA1AEYALgBhAG4AeQBjAGEAcwB0AC4AbgBhAGcAcgBhAC4AYwBvAG0ALwBSAEEASQA2AE4AQgA1AEYALwBwAHIAbABzAC8AYwBvAG4AdABlAG4AdABsAGkAYwBlAG4AcwBlAHMAZQByAHYAaQBjAGUALwB2ADEALwBsAGkAYwBlAG4AcwBlAHMAPAAvAEwAVQBJAF8AVQBSAEwAPgA8AEsASQBEAD4ATAA0ADQAdABjAGEAVQA5ADcARABPAEUAeQA1AG4AUwBYAFcARgB4AGsAQQA9AD0APAAvAEsASQBEAD4APABDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTACAAeABtAGwAbgBzAD0AIgAiAD4APABDAG8AbgB0AGUAbgB0AFIAZQBmAD4AcgBhAGkANABrADwALwBDAG8AbgB0AGUAbgB0AFIAZQBmAD4APAAvAEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEMASABFAEMASwBTAFUATQA+ADEANQB2AGYAVgBKAG8AOABCAGoAYwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AC8ARABBAFQAQQA+ADwALwBXAFIATQBIAEUAQQBEAEUAUgA+AA==</cenc:pssh>
+        </ContentProtection>
+        <SegmentTemplate presentationTimeOffset="0" timescale="90000" duration="540000" startNumber="1" media="media_$RepresentationID$-$Number$.m4s" initialization="init_$RepresentationID$.m4s"/>
+        <Representation id="video_raievent10_10000" codecs="hvc1.2.4.L153.B1.0.1.1" sar="1:1" bandwidth="9829000">
+            <BaseURL>raievent10_10000/3anl8qjg/</BaseURL>
+        </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" mimeType="audio/mp4" lang="eng" segmentAlignment="true" startWithSAP="1" subsegmentAlignment="true" subsegmentStartsWithSAP="1">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="712d8e2f-3da5-33ec-84cb-99d25d617190"/>
+        <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed" value="Widevine">
+            <cenc:pssh>AAAAQnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAACIIARIQcS2OLz2lM+yEy5nSXWFxkBoFTmFncmEiBXJhaTRr</cenc:pssh>
+        </ContentProtection>
+        <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="Playready">
+            <cenc:pssh>AAAETnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAABC4uBAAAAQABACQEPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwATABBAF8AVQBSAEwAPgBoAHQAdABwAHMAOgAvAC8AUgBBAEkANgBOAEIANQBGAC4AYQBuAHkAYwBhAHMAdAAuAG4AYQBnAHIAYQAuAGMAbwBtAC8AUgBBAEkANgBOAEIANQBGAC8AcAByAGwAcwAvAGMAbwBuAHQAZQBuAHQAbABpAGMAZQBuAHMAZQBzAGUAcgB2AGkAYwBlAC8AdgAxAC8AbABpAGMAZQBuAHMAZQBzADwALwBMAEEAXwBVAFIATAA+ADwATABVAEkAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBSAEEASQA2AE4AQgA1AEYALgBhAG4AeQBjAGEAcwB0AC4AbgBhAGcAcgBhAC4AYwBvAG0ALwBSAEEASQA2AE4AQgA1AEYALwBwAHIAbABzAC8AYwBvAG4AdABlAG4AdABsAGkAYwBlAG4AcwBlAHMAZQByAHYAaQBjAGUALwB2ADEALwBsAGkAYwBlAG4AcwBlAHMAPAAvAEwAVQBJAF8AVQBSAEwAPgA8AEsASQBEAD4ATAA0ADQAdABjAGEAVQA5ADcARABPAEUAeQA1AG4AUwBYAFcARgB4AGsAQQA9AD0APAAvAEsASQBEAD4APABDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTACAAeABtAGwAbgBzAD0AIgAiAD4APABDAG8AbgB0AGUAbgB0AFIAZQBmAD4AcgBhAGkANABrADwALwBDAG8AbgB0AGUAbgB0AFIAZQBmAD4APAAvAEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEMASABFAEMASwBTAFUATQA+ADEANQB2AGYAVgBKAG8AOABCAGoAYwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AC8ARABBAFQAQQA+ADwALwBXAFIATQBIAEUAQQBEAEUAUgA+AA==</cenc:pssh>
+        </ContentProtection>
+        <SegmentTemplate presentationTimeOffset="0" timescale="48000" duration="288000" startNumber="1" media="media_$RepresentationID$-$Number$.m4s" initialization="init_$RepresentationID$.m4s"/>
+        <Representation id="audio_raievent10_10000" codecs="mp4a.40.2" audioSamplingRate="48000" sar="1:1" bandwidth="316000">
+            <BaseURL>raievent10_10000/3anl8qjg/</BaseURL>
+        </Representation>
+    </AdaptationSet>
+</Period>
+</MPD>
